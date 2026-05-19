@@ -13,7 +13,7 @@
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
 
-const REQUESTS_PER_HOUR = 20;
+const REQUESTS_PER_HOUR = 100;
 const WINDOW = "1 h" as const;
 
 let limiter: Ratelimit | null = null;
