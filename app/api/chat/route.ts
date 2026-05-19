@@ -128,7 +128,7 @@ export async function POST(req: Request) {
     const trimmedMessages = messages.slice(-8);
 
     const result = streamText({
-      model: google("gemini-flash-latest"),
+      model: google("gemini-2.5-flash-lite"),
       system: SYSTEM_PROMPT,
       messages: trimmedMessages,
       temperature: 0.4, // low temp = consistent, factual, on-message
