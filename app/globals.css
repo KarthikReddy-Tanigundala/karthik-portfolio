@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-ink text-bone font-sans;
+    font-feature-settings: "cv11", "ss01", "ss03";
+  }
+
+  ::selection {
+    @apply bg-signal-blue text-bone;
+  }
+
+  /* Focus ring — visible, on-brand, accessible */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-signal-blue ring-offset-2 ring-offset-ink;
+  }
+
+  /* Honest scrollbar styling — dark, restrained */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(245, 245, 240, 0.12);
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(245, 245, 240, 0.2);
+  }
+}
+
+@layer components {
+  .hairline {
+    @apply border-hairline;
+  }
+
+  .section-pad {
+    @apply px-6 md:px-10 lg:px-16 py-20 md:py-28;
+  }
+
+  .container-page {
+    @apply max-w-page mx-auto;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-bone-mute;
+  }
+
+  .link-underline {
+    @apply relative after:absolute after:left-0 after:bottom-0 after:h-px after:w-full after:bg-current after:origin-right after:scale-x-0 hover:after:scale-x-100 hover:after:origin-left after:transition-transform after:duration-300 after:ease-stripe;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+
+/* Prevent FOUC on font load */
+.font-loading body {
+  visibility: hidden;
+}
+
+@layer components {
+  /* Chat markdown — restrained, on-brand */
+  .prose-chat {
+    @apply text-[15px] leading-relaxed text-bone;
+  }
+  .prose-chat > *:first-child {
+    @apply mt-0;
+  }
+  .prose-chat > *:last-child {
+    @apply mb-0;
+  }
+}
