@@ -128,11 +128,11 @@ export async function POST(req: Request) {
     const trimmedMessages = messages.slice(-8);
 
     const result = streamText({
-      model: google("gemini-2.5-flash-lite"),
+      model: google(process.env.GEMINI_MODEL ?? "gemini-2.5-flash-lite"),
       system: SYSTEM_PROMPT,
       messages: trimmedMessages,
       temperature: 0.4, // low temp = consistent, factual, on-message
-      maxTokens: 300, // 2-4 sentence answers rarely exceed 200 tokens
+      maxTokens: 400, // 2-4 sentence answers, occasionally a short list
       maxRetries: 1, // fail fast instead of silently retrying
       providerOptions: {
         google: {

@@ -25,6 +25,7 @@ const config: Config = {
           "blue-dim": "#1E4FBF",
           amber: "#F59E0B",
           "amber-dim": "#C97F09",
+          green: "#34D399",
         },
         hairline: "rgba(245, 245, 240, 0.08)",
         "hairline-strong": "rgba(245, 245, 240, 0.16)",

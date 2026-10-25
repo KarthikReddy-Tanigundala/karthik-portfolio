@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Karthik Reddy — Data Analyst, Melbourne";
+export const alt = "Karthik Reddy — Data Analyst, Analytics Engineer & Data Scientist, Melbourne";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -43,25 +43,26 @@ export default async function OpengraphImage() {
         <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
           <div
             style={{
-              fontSize: "96px",
+              fontSize: "74px",
               fontWeight: 400,
-              lineHeight: 1,
+              lineHeight: 1.05,
               letterSpacing: "-0.02em",
-              maxWidth: "950px",
+              maxWidth: "1040px",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
-            Data Analyst.{" "}
-            <span style={{ color: "#2563EB" }}>Shipping production AI</span>{" "}
-            for Australian industry.
+            <span>Data analyst, analytics engineer &amp; data scientist.</span>
+            <span style={{ color: "#2563EB" }}>Shipped, measured, honest.</span>
           </div>
           <div
             style={{
-              fontSize: "28px",
+              fontSize: "27px",
               color: "#C8C8C0",
               fontFamily: "sans-serif",
             }}
           >
-            Master of Data Science @ RMIT · ex-Zelis Healthcare · ex-EnergyTech
+            Snowflake · dbt · Power BI · Python · forecasting · RAG · RMIT
           </div>
         </div>
 
@@ -77,20 +78,20 @@ export default async function OpengraphImage() {
           }}
         >
           <div style={{ display: "flex", gap: "32px" }}>
-            <div>
-              <div style={{ color: "#F59E0B", fontSize: "18px" }}>CGPA</div>
-              <div style={{ color: "#F5F5F0", fontSize: "32px" }}>8.50</div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ color: "#F59E0B", fontSize: "18px" }}>PROJECTS 2026</div>
+              <div style={{ color: "#F5F5F0", fontSize: "32px" }}>7</div>
             </div>
-            <div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
               <div style={{ color: "#F59E0B", fontSize: "18px" }}>EXP</div>
               <div style={{ color: "#F5F5F0", fontSize: "32px" }}>2+ yrs</div>
             </div>
-            <div>
-              <div style={{ color: "#F59E0B", fontSize: "18px" }}>485 ELIGIBLE</div>
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div style={{ color: "#F59E0B", fontSize: "18px" }}>FULL WORK RIGHTS</div>
               <div style={{ color: "#F5F5F0", fontSize: "32px" }}>Nov 2026</div>
             </div>
           </div>
-          <div>karthik-reddy.vercel.app</div>
+          <div>Open to data roles</div>
         </div>
       </div>
     ),

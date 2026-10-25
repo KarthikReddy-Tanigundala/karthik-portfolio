@@ -1,95 +1,139 @@
-import { Mail, Linkedin, ArrowDown, FileDown } from "lucide-react";
-import { ChatPanel } from "@/components/chat/chat-panel";
+import { Mail, Linkedin, Github, FileDown, MapPin, GraduationCap } from "lucide-react";
 import { DotGrid } from "@/components/ui/dot-grid";
 import { WorkRightsBadge } from "@/components/ui/work-rights-badge";
+import { RoleLens } from "@/components/sections/role-lens";
 
 export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center pt-20 pb-12 md:pt-24 md:pb-16"
+      className="relative lg:min-h-[92vh] flex items-center pt-24 pb-14 md:pb-16"
       aria-label="Introduction"
     >
       <DotGrid />
 
-      <div className="container-page w-full px-6 md:px-10 lg:px-16 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="container-page w-full px-4 sm:px-6 md:px-10 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         {/* LEFT: intro */}
-        <div className="lg:col-span-5 space-y-7">
-          <div className="space-y-3 animate-fade-up">
-            <p className="eyebrow">Melbourne · AU · Available</p>
-            <h1 className="font-serif text-display-xl text-bone text-balance">
+        <div className="lg:col-span-6 space-y-7 min-w-0">
+          <div
+            className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-full border border-hairline-strong bg-ink-50/60 animate-fade-up"
+            role="status"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full rounded-full bg-signal-green opacity-60 animate-ping" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-signal-green" />
+            </span>
+            <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-bone-dim">
+              Open to Melbourne data roles · full-time from Nov 2026
+            </span>
+          </div>
+
+          <div className="space-y-4">
+            <h1
+              className="font-serif text-display-xl text-bone text-balance animate-fade-up"
+              style={{ animationDelay: "60ms" }}
+            >
               Karthik <span className="text-signal-blue italic">Reddy</span>
             </h1>
-            <p className="font-serif text-display-md text-bone-dim text-balance italic leading-[1.1]">
-              Data Analyst, shipping production AI for Australian industry.
+            <p
+              className="font-mono text-[12px] sm:text-[13px] uppercase tracking-[0.16em] text-signal-amber animate-fade-up"
+              style={{ animationDelay: "120ms" }}
+            >
+              Data Analyst · Analytics Engineer · Data Scientist
+            </p>
+            <p
+              className="font-serif text-display-md text-bone-dim text-balance italic leading-[1.12] animate-fade-up"
+              style={{ animationDelay: "180ms" }}
+            >
+              From raw feeds to tested models, calibrated forecasts and dashboards people act on.
             </p>
           </div>
 
           <p
             className="text-bone-dim leading-relaxed text-pretty max-w-prose animate-fade-up"
-            style={{ animationDelay: "100ms" }}
+            style={{ animationDelay: "240ms" }}
           >
-            Master of Data Science @ RMIT · ex-Data Analyst at Zelis Healthcare
-            (Snowflake, Power BI, US payer analytics) · ex-EnergyTech Global
-            (Python, PostgreSQL, ANZ retail energy).
+            <span className="text-bone">2+ years of production data and BI</span>{" "}
+            at Zelis Healthcare (US payers) and EnergyTech Global (AU/NZ energy),
+            plus <span className="text-bone">seven end-to-end projects in 2026</span>
+            {" "}across health, energy, transport, sport and an AI assistant
+            delivered to Better Health Network.
           </p>
 
-          <div
-            className="animate-fade-up"
-            style={{ animationDelay: "200ms" }}
+          <ul
+            className="flex flex-wrap gap-x-5 gap-y-2 text-[13.5px] text-bone-mute animate-fade-up"
+            style={{ animationDelay: "280ms" }}
           >
+            <li className="inline-flex items-center gap-1.5">
+              <GraduationCap className="w-4 h-4 text-signal-blue" aria-hidden="true" />
+              Master of Data Science, RMIT · Nov 2026
+            </li>
+            <li className="inline-flex items-center gap-1.5">
+              <MapPin className="w-4 h-4 text-signal-blue" aria-hidden="true" />
+              Melbourne, VIC
+            </li>
+          </ul>
+
+          <div className="animate-fade-up" style={{ animationDelay: "300ms" }}>
             <WorkRightsBadge />
           </div>
 
           <div
             className="flex flex-wrap gap-3 animate-fade-up"
-            style={{ animationDelay: "300ms" }}
+            style={{ animationDelay: "360ms" }}
           >
             <a
               href="/Karthik-Reddy-Resume.pdf"
-              download
+              target="_blank"
+              rel="noopener"
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-signal-blue text-bone hover:bg-signal-blue-dim transition-colors text-sm font-medium"
             >
               <FileDown className="w-4 h-4" />
               Resume
             </a>
-            <a
-              href="mailto:karthikreddytanigundala@gmail.com"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-hairline-strong text-bone hover:border-signal-blue/40 hover:bg-signal-blue/5 transition-colors text-sm font-medium"
-            >
-              <Mail className="w-4 h-4" />
+            <HeroLink href="mailto:karthikreddytanigundala@gmail.com" icon={Mail}>
               Email
-            </a>
-            <a
-              href="https://linkedin.com/in/karthik-reddy-datascience"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-hairline-strong text-bone hover:border-signal-blue/40 hover:bg-signal-blue/5 transition-colors text-sm font-medium"
-            >
-              <Linkedin className="w-4 h-4" />
+            </HeroLink>
+            <HeroLink href="https://linkedin.com/in/karthik-reddy-datascience" icon={Linkedin} external>
               LinkedIn
-            </a>
-          </div>
-
-          <div
-            className="hidden md:flex items-center gap-2 pt-4 animate-fade-up"
-            style={{ animationDelay: "400ms" }}
-          >
-            <ArrowDown className="w-3.5 h-3.5 text-bone-mute" />
-            <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-bone-mute">
-              Or scroll · or ask the chat →
-            </span>
+            </HeroLink>
+            <HeroLink href="https://github.com/KarthikReddy-Tanigundala" icon={Github} external>
+              GitHub
+            </HeroLink>
           </div>
         </div>
 
-        {/* RIGHT: chat */}
+        {/* RIGHT: interactive role lens */}
         <div
-          className="lg:col-span-7 animate-fade-up"
-          style={{ animationDelay: "200ms" }}
+          className="lg:col-span-6 min-w-0 animate-fade-up"
+          style={{ animationDelay: "300ms" }}
         >
-          <ChatPanel />
+          <RoleLens />
         </div>
       </div>
     </section>
+  );
+}
+
+function HeroLink({
+  href,
+  icon: Icon,
+  external = false,
+  children,
+}: {
+  href: string;
+  icon: typeof Mail;
+  external?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md border border-hairline-strong text-bone hover:border-signal-blue/40 hover:bg-signal-blue/5 transition-colors text-sm font-medium"
+    >
+      <Icon className="w-4 h-4" />
+      {children}
+    </a>
   );
 }

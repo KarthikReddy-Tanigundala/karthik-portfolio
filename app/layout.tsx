@@ -26,26 +26,36 @@ const jetbrainsMono = JetBrains_Mono({
   preload: false,
 });
 
+// NEXT_PUBLIC_SITE_URL wins; otherwise Vercel's own production domain; local fallback.
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://karthik-reddy.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Karthik Reddy — Data Analyst, Melbourne",
+    default: "Karthik Reddy — Data Analyst, Analytics Engineer & Data Scientist, Melbourne",
     template: "%s | Karthik Reddy",
   },
   description:
-    "Master of Data Science @ RMIT. Ex-Data Analyst at Zelis Healthcare. Shipping production AI for Australian industry. Available in Melbourne.",
+    "Melbourne data professional: 2+ years production SQL and Power BI (Zelis Healthcare, EnergyTech), plus seven 2026 projects in dbt, forecasting, ML and RAG, including an AI assistant for Better Health Network. Master of Data Science @ RMIT. Full work rights from Nov 2026, no sponsorship needed.",
   keywords: [
     "Karthik Reddy",
     "Data Analyst Melbourne",
-    "Power BI Melbourne",
+    "Analytics Engineer Melbourne",
+    "Data Scientist Melbourne",
+    "BI Developer Melbourne",
+    "Power BI",
+    "dbt",
     "Snowflake SQL",
-    "RMIT Data Science",
-    "Junior Data Scientist Australia",
-    "Business Intelligence Analyst",
+    "Time series forecasting",
+    "RAG LLM Engineer",
+    "Copilot Studio",
+    "RMIT Master of Data Science",
     "Healthcare Analytics Australia",
+    "Energy Analytics Australia",
   ],
   authors: [{ name: "Karthik Reddy Tanigundala" }],
   creator: "Karthik Reddy Tanigundala",
@@ -54,23 +64,23 @@ export const metadata: Metadata = {
     locale: "en_AU",
     url: SITE_URL,
     siteName: "Karthik Reddy",
-    title: "Karthik Reddy — Data Analyst, Melbourne",
+    title: "Karthik Reddy — Data Analyst, Analytics Engineer & Data Scientist, Melbourne",
     description:
-      "Master of Data Science @ RMIT. Ex-Data Analyst at Zelis Healthcare. Shipping production AI for Australian industry.",
+      "Production SQL & Power BI, dbt star schemas, calibrated forecasts and cited RAG systems. Master of Data Science @ RMIT. Full work rights from Nov 2026, no sponsorship.",
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "Karthik Reddy — Data Analyst, Melbourne",
+        alt: "Karthik Reddy — Data Analyst, Analytics Engineer & Data Scientist, Melbourne",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Karthik Reddy — Data Analyst, Melbourne",
+    title: "Karthik Reddy — Data Analyst, Analytics Engineer & Data Scientist, Melbourne",
     description:
-      "Master of Data Science @ RMIT. Ex-Data Analyst at Zelis Healthcare. Shipping production AI for Australian industry.",
+      "Production SQL & Power BI, dbt star schemas, calibrated forecasts and cited RAG systems. Master of Data Science @ RMIT. Full work rights from Nov 2026, no sponsorship.",
     images: ["/opengraph-image"],
   },
   robots: {
@@ -103,9 +113,9 @@ const personJsonLd = {
   givenName: "Karthik",
   familyName: "Tanigundala",
   additionalName: "Reddy",
-  jobTitle: "Data Analyst",
+  jobTitle: "Data Analyst · Analytics Engineer · Data Scientist",
   description:
-    "Master of Data Science student at RMIT University Melbourne. Former Data Analyst at Zelis Healthcare India.",
+    "Melbourne data professional with 2+ years of production SQL and Power BI experience (Zelis Healthcare, EnergyTech Global) and a Master of Data Science from RMIT University (Nov 2026).",
   email: "mailto:karthikreddytanigundala@gmail.com",
   telephone: "+61422607945",
   url: SITE_URL,
@@ -130,11 +140,15 @@ const personJsonLd = {
   ],
   knowsAbout: [
     "Data Analysis",
-    "Business Intelligence",
+    "Analytics Engineering",
+    "dbt",
+    "Snowflake",
     "Power BI",
-    "Snowflake SQL",
+    "DAX",
     "Python",
     "Machine Learning",
+    "Time Series Forecasting",
+    "Retrieval-Augmented Generation",
     "Healthcare Analytics",
     "Energy Analytics",
   ],

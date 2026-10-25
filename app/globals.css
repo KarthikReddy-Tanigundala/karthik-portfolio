@@ -9,6 +9,7 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -51,7 +52,7 @@
   }
 
   .section-pad {
-    @apply px-6 md:px-10 lg:px-16 py-20 md:py-28;
+    @apply px-4 sm:px-6 md:px-10 lg:px-16 py-20 md:py-28;
   }
 
   .container-page {
@@ -76,6 +77,13 @@
     text-wrap: pretty;
   }
 
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .mask-fade-b {
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
@@ -96,5 +104,16 @@
   }
   .prose-chat > *:last-child {
     @apply mb-0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

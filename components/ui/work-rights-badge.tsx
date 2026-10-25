@@ -12,7 +12,7 @@ export function WorkRightsBadge() {
         strokeWidth={2.5}
       />
       <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-bone">
-        Australian work rights · 485 from Nov 2026
+        Full work rights from Nov 2026 · No sponsorship needed
       </span>
     </div>
   );

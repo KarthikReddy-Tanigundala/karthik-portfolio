@@ -2,9 +2,17 @@
 
 import { useState } from "react";
 import { Mail, Linkedin, MessageSquare, Loader2 } from "lucide-react";
+import { Reveal } from "@/components/ui/reveal";
 import { cn } from "@/lib/utils";
 
 type FormState = "idle" | "submitting" | "success" | "error";
+
+const SCREENING: [string, string][] = [
+  ["Location", "Niddrie, Melbourne VIC · car and licence"],
+  ["Work rights", "Student visa now (48 h/fortnight); 485 graduate visa from Nov 2026, 3 years, no sponsorship"],
+  ["Availability", "Casual / part-time now · full-time from Nov 2026"],
+  ["Checks", "National Police Check · Working With Children Check"],
+];
 
 export function Contact() {
   const [state, setState] = useState<FormState>("idle");
@@ -39,17 +47,19 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="section-pad border-t border-hairline"
+      className="section-pad border-t border-hairline scroll-mt-14"
       aria-label="Contact"
     >
-      <div className="container-page grid lg:grid-cols-2 gap-12 lg:gap-20">
-        <div className="space-y-7">
+      <div className="container-page grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+        <Reveal className="space-y-7">
           <p className="eyebrow">Contact</p>
           <h2 className="font-serif text-display-lg text-bone text-balance leading-[1.05]">
-            Three ways to reach me.
+            Let's talk about your team.
           </h2>
           <p className="text-bone-dim leading-relaxed text-pretty max-w-prose">
-            I read every message. Reply within 24 hrs AEST.
+            Open to Data Analyst, BI, Analytics Engineer and Data Scientist
+            roles in Melbourne: casual or part-time now, full-time from
+            November 2026 with no sponsorship needed. I reply within 24 hours AEST.
           </p>
 
           <div className="space-y-4 pt-2">
@@ -94,7 +104,7 @@ export function Contact() {
             </a>
 
             <a
-              href="#top"
+              href="#ask"
               className="group flex items-center gap-4 py-4 border-b border-hairline hover:border-signal-blue/50 transition-colors"
             >
               <MessageSquare
@@ -107,14 +117,15 @@ export function Contact() {
                   Or ask the chat
                 </p>
                 <p className="text-bone group-hover:text-signal-blue transition-colors">
-                  Back to the assistant
+                  Ask my AI assistant
                 </p>
               </div>
             </a>
           </div>
-        </div>
+        </Reveal>
 
-        <div>
+        {formspreeEndpoint ? (
+        <Reveal delay={0.1}>
           <form
             onSubmit={handleSubmit}
             className="space-y-5 p-6 md:p-8 rounded-lg border border-hairline bg-ink-50/40"
@@ -185,7 +196,20 @@ export function Contact() {
               </p>
             )}
           </form>
-        </div>
+        </Reveal>
+        ) : (
+          <Reveal delay={0.1} className="p-6 md:p-8 rounded-lg border border-hairline bg-ink-50/40 space-y-4 self-start">
+            <p className="eyebrow">Quick facts for screening</p>
+            <dl className="space-y-3 text-[14.5px]">
+              {SCREENING.map(([k, v]) => (
+                <div key={k} className="grid grid-cols-[120px_1fr] gap-3">
+                  <dt className="font-mono text-[11px] uppercase tracking-[0.12em] text-bone-mute pt-0.5">{k}</dt>
+                  <dd className="text-bone-dim">{v}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+        )}
       </div>
     </section>
   );

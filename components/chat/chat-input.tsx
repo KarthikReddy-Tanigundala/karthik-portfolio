@@ -61,7 +61,7 @@ export function ChatInput({
           onKeyDown={handleKeyDown}
           disabled={disabled}
           rows={1}
-          placeholder="Ask about my projects, work rights, Snowflake experience…"
+          placeholder="Ask about projects, tools, experience, work rights…"
           aria-label="Ask Karthik's portfolio assistant"
           className={cn(
             "flex-1 bg-transparent text-bone placeholder:text-bone-mute text-[15px] leading-relaxed",

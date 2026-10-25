@@ -8,13 +8,13 @@ import { ExampleChips } from "./example-chips";
 import { TypingIndicator } from "./typing-indicator";
 
 const INITIAL_GREETING =
-  "Hi — I'm Karthik's portfolio assistant. Ask me about my work, projects, work rights, or anything in my background. I'll answer in his voice.";
+  "Hi, I'm Karthik's portfolio assistant. Ask about his projects, tools, experience, availability or work rights. I answer in his voice, from the same data this page is built on.";
 
 const EXAMPLE_QUESTIONS = [
-  "What's your strongest project?",
-  "Healthcare data experience?",
+  "Best project for a BI role?",
+  "What did you build for BHN?",
+  "dbt + Snowflake experience?",
   "Work rights in Australia?",
-  "Available for internships?",
 ];
 
 export function ChatPanel() {
@@ -68,7 +68,7 @@ export function ChatPanel() {
 
   return (
     <div
-      className="flex flex-col h-full min-h-[480px] max-h-[640px] bg-ink-50/60 border border-hairline rounded-lg overflow-hidden backdrop-blur-sm"
+      className="flex flex-col h-[560px] md:h-[600px] bg-ink-50/60 border border-hairline rounded-lg overflow-hidden backdrop-blur-sm"
       role="region"
       aria-label="Chat with Karthik's portfolio assistant"
     >
