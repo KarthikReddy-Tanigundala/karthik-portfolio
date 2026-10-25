@@ -93,12 +93,17 @@ export async function checkRateLimit(ip: string): Promise<{
   const upstash = getLimiter();
 
   if (upstash) {
-    const result = await upstash.limit(ip);
-    return {
-      success: result.success,
-      remaining: result.remaining,
-      reset: result.reset,
-    };
+    try {
+      const result = await upstash.limit(ip);
+      return {
+        success: result.success,
+        remaining: result.remaining,
+        reset: result.reset,
+      };
+    } catch (err) {
+      // An unreachable or deleted Redis must not take the chat down.
+      console.error("[rate-limit] Upstash failed, using in-memory limiter:", err);
+    }
   }
 
   return memoryLimit(ip);
