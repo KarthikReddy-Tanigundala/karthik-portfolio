@@ -87,8 +87,8 @@ export default async function OpengraphImage() {
               <div style={{ color: "#F5F5F0", fontSize: "32px" }}>2+ yrs</div>
             </div>
             <div style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ color: "#F59E0B", fontSize: "18px" }}>FULL WORK RIGHTS</div>
-              <div style={{ color: "#F5F5F0", fontSize: "32px" }}>Nov 2026</div>
+              <div style={{ color: "#F59E0B", fontSize: "18px" }}>AVAILABLE</div>
+              <div style={{ color: "#F5F5F0", fontSize: "32px" }}>Now</div>
             </div>
           </div>
           <div>Open to data roles</div>

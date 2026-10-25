@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     template: "%s | Karthik Reddy",
   },
   description:
-    "Melbourne data professional: 2+ years production SQL and Power BI (Zelis Healthcare, EnergyTech), plus seven 2026 projects in dbt, forecasting, ML and RAG, including an AI assistant for Better Health Network. Master of Data Science @ RMIT. Full work rights from Nov 2026, no sponsorship needed.",
+    "Melbourne data professional: 2+ years production SQL and Power BI (Zelis Healthcare, EnergyTech), plus seven 2026 projects in dbt, forecasting, ML and RAG, including an AI assistant for Better Health Network. Master of Data Science @ RMIT. Available now in Melbourne.",
   keywords: [
     "Karthik Reddy",
     "Data Analyst Melbourne",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     siteName: "Karthik Reddy",
     title: "Karthik Reddy — Data Analyst, Analytics Engineer & Data Scientist, Melbourne",
     description:
-      "Production SQL & Power BI, dbt star schemas, calibrated forecasts and cited RAG systems. Master of Data Science @ RMIT. Full work rights from Nov 2026, no sponsorship.",
+      "Production SQL & Power BI, dbt star schemas, calibrated forecasts and cited RAG systems. Master of Data Science @ RMIT. Available now in Melbourne.",
     images: [
       {
         url: "/opengraph-image",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Karthik Reddy — Data Analyst, Analytics Engineer & Data Scientist, Melbourne",
     description:
-      "Production SQL & Power BI, dbt star schemas, calibrated forecasts and cited RAG systems. Master of Data Science @ RMIT. Full work rights from Nov 2026, no sponsorship.",
+      "Production SQL & Power BI, dbt star schemas, calibrated forecasts and cited RAG systems. Master of Data Science @ RMIT. Available now in Melbourne.",
     images: ["/opengraph-image"],
   },
   robots: {

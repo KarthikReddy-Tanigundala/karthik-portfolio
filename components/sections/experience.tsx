@@ -17,7 +17,7 @@ const EXPERIENCE: Role[] = [
     badge: "Health",
     points: [
       "Co-built AssistBot, a Copilot Studio agent in Teams that answers funding-reporting questions across 7 funding streams with cited sources and the exact TrakCare step.",
-      "Structured scattered program guidelines into a 166-entry SharePoint knowledge base that staff can maintain without code; designed a 63-case, three-run evaluation with Wilson intervals.",
+      "Structured scattered program guidelines into a 166-entry SharePoint knowledge base that staff can maintain without code; designed a 63-case, three-run evaluation in which the agent reached 90–95% answer accuracy.",
     ],
   },
   {
@@ -94,7 +94,7 @@ const NOW = [
   },
   {
     label: "Graduating",
-    text: "Master of Data Science, RMIT, November 2026, with full work rights from then.",
+    text: "Master of Data Science, RMIT, November 2026.",
   },
 ];
 

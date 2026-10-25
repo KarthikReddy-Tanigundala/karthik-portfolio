@@ -147,11 +147,11 @@ export const projects: Project[] = [
     roleFit: { analyst: 2, bi: 1, ae: 1, ds: 1, ai: 3 },
     tagline:
       "A grounded, cited Microsoft Teams assistant that tells community-health staff how to record a client contact correctly for each funding stream, down to the exact TrakCare step.",
-    headline: { value: "7", label: "Funding streams covered, with cross-stream safety" },
+    headline: { value: "90–95%", label: "Answer accuracy on a 63-case evaluation across 7 funding streams" },
     metrics: [
+      { value: "7", label: "Funding streams covered, with cross-stream safety" },
       { value: "166", label: "Knowledge-base entries: 65 rules, 41 FAQs, 60 terms" },
-      { value: "63", label: "Evaluation cases, each run 3 times" },
-      { value: "95% CI", label: "Wilson intervals on every reported rate" },
+      { value: "63 × 3", label: "Evaluation cases, each run three times" },
       { value: "No code", label: "Staff update answers by editing SharePoint rows" },
     ],
     problem:
@@ -163,16 +163,15 @@ export const projects: Project[] = [
       "Designed a 63-case evaluation (45 single-turn cases, 18 conversations) across all streams, including phrasing variants and cross-stream traps, graded on correctness, program detection, citation and format.",
     ],
     results: [
+      "Answer accuracy of 90–95% across the evaluation runs, meeting the 90% correctness target set in the project proposal.",
       "Answers across all 7 streams in the approved, cited format.",
       "Cross-stream safety holds: the bot does not apply one program's rule to another.",
       "Rules are maintainable by staff in SharePoint, so answers change without code.",
     ],
     limits: [
       "Depends on Microsoft licensing for the SharePoint list connector.",
-      "Generative retrieval is not fully deterministic, which is why every case is run three times.",
+      "Generative retrieval is not fully deterministic, which is why every case is run three times and accuracy is reported as a range rather than a single number.",
     ],
-    pendingNote:
-      "Quantitative accuracy and citation results are being finalised from the 63-case evaluation.",
     team: "Team of three with Janavi Mahesh and Soham Patel",
     stack: [
       "Microsoft Copilot Studio",

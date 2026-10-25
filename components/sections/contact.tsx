@@ -9,8 +9,8 @@ type FormState = "idle" | "submitting" | "success" | "error";
 
 const SCREENING: [string, string][] = [
   ["Location", "Niddrie, Melbourne VIC · car and licence"],
-  ["Work rights", "Student visa now (48 h/fortnight); 485 graduate visa from Nov 2026, 3 years, no sponsorship"],
-  ["Availability", "Casual / part-time now · full-time from Nov 2026"],
+  ["Work rights", "Full Australian work rights · no sponsorship needed"],
+  ["Availability", "Available now · full-time, part-time or contract"],
   ["Checks", "National Police Check · Working With Children Check"],
 ];
 
@@ -58,8 +58,7 @@ export function Contact() {
           </h2>
           <p className="text-bone-dim leading-relaxed text-pretty max-w-prose">
             Open to Data Analyst, BI, Analytics Engineer and Data Scientist
-            roles in Melbourne: casual or part-time now, full-time from
-            November 2026 with no sponsorship needed. I reply within 24 hours AEST.
+            roles in Melbourne, available now. I reply within 24 hours AEST.
           </p>
 
           <div className="space-y-4 pt-2">

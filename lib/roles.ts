@@ -103,7 +103,7 @@ export const ROLES: Role[] = [
     label: "AI / LLM Engineer",
     short: "AI",
     pitch:
-      "Grounded, cited LLM systems with measured retrieval: a hybrid RAG with reranking that lifts MRR by +0.17 with a confidence interval, RAGAS evaluation and layered guardrails, plus a Copilot Studio agent built for Better Health Network staff.",
+      "Grounded, cited LLM systems with measured retrieval: a hybrid RAG with reranking that lifts MRR by +0.17 with a confidence interval, RAGAS evaluation and layered guardrails, plus a Copilot Studio agent for Better Health Network staff that reached 90–95% answer accuracy on a 63-case evaluation.",
     focusTools: [
       "RAG",
       "Gemini API",

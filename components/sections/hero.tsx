@@ -1,6 +1,5 @@
 import { Mail, Linkedin, Github, FileDown, MapPin, GraduationCap } from "lucide-react";
 import { DotGrid } from "@/components/ui/dot-grid";
-import { WorkRightsBadge } from "@/components/ui/work-rights-badge";
 import { RoleLens } from "@/components/sections/role-lens";
 
 export function Hero() {
@@ -24,7 +23,7 @@ export function Hero() {
               <span className="relative inline-flex h-2 w-2 rounded-full bg-signal-green" />
             </span>
             <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-bone-dim">
-              Open to Melbourne data roles · full-time from Nov 2026
+              Open to Melbourne data roles · available now
             </span>
           </div>
 
@@ -74,9 +73,6 @@ export function Hero() {
             </li>
           </ul>
 
-          <div className="animate-fade-up" style={{ animationDelay: "300ms" }}>
-            <WorkRightsBadge />
-          </div>
 
           <div
             className="flex flex-wrap gap-3 animate-fade-up"
